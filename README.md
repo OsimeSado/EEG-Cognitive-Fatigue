@@ -44,7 +44,7 @@ The dataset was used **exactly as provided** by the original authors, which alre
 
 The project is organized into a **three-stage computational pipeline**, designed for clarity, modularity, and reproducibility.
 
-### 1️⃣ Data Loading Stage (`data_loader.py`)
+### (I) Data Loading Stage (`data_loader.py`)
 - Handles all EEG data ingestion
 - Loads:
   - Subject-level metadata (`subject-info.csv`)
@@ -64,7 +64,7 @@ No signal preprocessing (filtering, ICA, artifact rejection) is performed here, 
 
 ---
 
-### 2️⃣ Feature Extraction Stage (`feature_extraction.py`)
+### (II) Feature Extraction Stage (`feature_extraction.py`)
 - Consumes EEG data provided by `data_loader.py`
 - Computes a comprehensive set of:
   - Spectral features
@@ -76,7 +76,7 @@ No signal preprocessing (filtering, ICA, artifact rejection) is performed here, 
 
 ---
 
-### 3️⃣ Classification Stage (`ml_classification.py`)
+### (III) Classification Stage (`ml_classification.py`)
 - Loads all extracted feature sets
 - Merges features across domains
 - Performs classification using:
