@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This project focuses on the classification of cognitive states—specifically the transition from a **baseline (pre-task)** state to a **mental fatigue (post-task)** state induced by sustained mental arithmetic.
+This project focuses on the classification of cognitive states specifically the transition from a **baseline (pre-task)** state to a **mental fatigue (post-task)** state induced by sustained mental arithmetic.
 
 By leveraging advanced EEG feature engineering and machine learning techniques, the pipeline extracts **spectral, nonlinear, temporal, and network-level features** to identify neural markers associated with cognitive workload and fatigue.
 
