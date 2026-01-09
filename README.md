@@ -29,10 +29,6 @@ This project utilizes the **“EEG During Mental Arithmetic Tasks”** dataset b
 - **23-channel configuration**
 - International **10–20 electrode placement system**
 
-### Pre-processing Status (Important)
-
-⚠️ **No additional preprocessing was performed in this project.**
-
 The dataset was used **exactly as provided** by the original authors, which already included:
 - High-pass filtering (≤ 30 Hz)
 - 50 Hz notch filtering
@@ -41,8 +37,6 @@ The dataset was used **exactly as provided** by the original authors, which alre
   - Muscle artifacts
   - Cardiac artifacts
 - Selection of artifact-free **60-second EEG segments**
-
-This repository therefore **starts directly from feature extraction**, ensuring that all reported results reflect **feature engineering and machine learning performance**, not preprocessing effects.
 
 ---
 
@@ -65,7 +59,7 @@ The project is organized into a **three-stage computational pipeline**, designed
   - Raw EEG visualization
   - Subject-level summary reporting
 
-⚠️ **Note:**  
+**Note:**  
 No signal preprocessing (filtering, ICA, artifact rejection) is performed here, as the dataset is already preprocessed.
 
 ---
