@@ -167,6 +167,49 @@ All feature groups are merged into a unified dataset for classification.
 
 ## 6. Classification Results
 
+### Classification Results (Explanation)
+
+The classification task was designed to distinguish between **pre-fatigue** and **post-fatigue** EEG states using the extracted EEG features.
+
+Each sample represents the neural activity of a **single EEG channel** from a **single subject-condition recording**, allowing the model to learn fine-grained spatial and spectral fatigue-related patterns across the scalp.
+
+---
+
+### Dataset Summary Used for Classification
+
+- **Total subjects:** 36  
+- **Conditions:**  
+  - Pre-fatigue (baseline)  
+  - Post-fatigue (mental arithmetic task)  
+- **EEG channels used:** 21 (selected from a 23-channel EEG system)  
+- **Features per sample:** 28  
+- **Total samples:** **1,512**
+
+Each subject contributes multiple samples across channels and conditions, enabling high-resolution learning of fatigue-induced neural changes.
+
+---
+
+### Class Balance
+**50/50 split between pre and post fatigue**
+
+| Class | Samples | Percentage |
+|------|--------|------------|
+| Pre-fatigue | 756 | 50% |
+| Post-fatigue | 756 | 50% |
+
+---
+
+### Train–Test Split Strategy
+
+A standard stratified split was applied:
+
+- **Training set:** 70% (1,058 samples)  
+- **Test set:** 30% (454 samples)
+
+The split preserves **class balance** across training and test sets while ensuring that **pre- and post-fatigue samples remain correctly aligned** within the dataset.
+
+---
+
 Experiments were conducted using a **70/30 train–test split** on:
 
 **1,512 samples = 36 subjects × 2 conditions × 21 channels**
