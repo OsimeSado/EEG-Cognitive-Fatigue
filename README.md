@@ -199,7 +199,7 @@ Each subject contributes multiple samples across channels and conditions, enabli
 
 ---
 
-### Train–Test Split Strategy
+### Train–Test Split
 
 A standard stratified split was applied:
 
