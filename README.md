@@ -179,7 +179,7 @@ Experiments were conducted using a **70/30 train–test split** on:
 | SVM + PCA | 0.8722 | −2.46% |
 | SVM + Interactions | 0.6542 | −26.85% |
 
-🏆 **Best Model:** Stacking Ensemble (100% accuracy)
+**Best Model:** Stacking Ensemble (100% accuracy)
 
 **Top 5 Predictive Features**
 - graph_global_efficiency
