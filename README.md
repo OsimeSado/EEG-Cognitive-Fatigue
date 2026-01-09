@@ -210,13 +210,13 @@ All outputs are saved in `ml_advanced_results/`:
 ## 8. How to Run the Project
 
 ### Step 1: Prepare Data
-Place the **already preprocessed EEG files** in the expected data directory.
-
+``` bash
+python data_loader.py
+```
 ### Step 2: Feature Extraction
 ```bash
 python feature_extraction.py
 ```
-
 ### Step 3: Classification
 ```bash
 python ml_classification.py
