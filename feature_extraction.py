@@ -1,6 +1,5 @@
 """
-Feature Extraction Script - COMPLETE UPDATED VERSION
-Extracts comprehensive EEG features from pre-fatigue and post-fatigue data
+Feature Extraction Script 
 Saves results to CSV for visualization in subject-specific folders
 """
 
@@ -500,7 +499,6 @@ if __name__ == "__main__":
     
    
     # To process all subjects: set n_subjects=None or n_subjects=999
-    # To process specific number: set n_subjects=5, n_subjects=10, etc.
     batch_extract_all_subjects(DATA_DIR, OUTPUT_DIR, n_subjects=None)\
     
     print("\n Feature extraction complete!")
