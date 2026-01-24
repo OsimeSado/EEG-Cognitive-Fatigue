@@ -1,5 +1,5 @@
 """
-Machine Learning Module - Enhanced with Visualizations
+Machine Learning Module - with Visualizations
 Implements techniques to improve fatigue classification accuracy
 - Feature Engineering (interactions, PCA)
 - Ensemble Methods (voting, stacking)
@@ -49,9 +49,7 @@ class FatigueClassifier:
         self.y_pred_dict = {}
         self.y_pred_proba_dict = {}
     
-    # ========================================================================
-    # 1. ENHANCED DATA LOADING (WITH GRAPH METRICS)
-    # ========================================================================
+    # 1. DATA LOADING (WITH GRAPH METRICS)
     
     def load_all_features_enhanced(self):
         """Load features including graph metrics"""
@@ -149,9 +147,7 @@ class FatigueClassifier:
         
         return combined_df
     
-    # ========================================================================
     # 2. FEATURE ENGINEERING
-    # ========================================================================
     
     def engineer_features(self, X, feature_names, method='all'):
         """
@@ -175,7 +171,7 @@ class FatigueClassifier:
         
         if method in ['interactions', 'all']:
             print("Creating interaction features...")
-            # Create important interactions
+            # Create's important interactions
             # Theta/Beta ratio interaction
             theta_idx = [i for i, name in enumerate(feature_names) if 'theta_abs' in name]
             beta_idx = [i for i, name in enumerate(feature_names) if 'beta_abs' in name]
@@ -213,9 +209,7 @@ class FatigueClassifier:
         
         return X_enhanced, new_feature_names, None
     
-    # ========================================================================
     # 3. ENSEMBLE METHODS
-    # ========================================================================
     
     def create_voting_ensemble(self):
         """Create voting classifier from top models"""
@@ -261,9 +255,7 @@ class FatigueClassifier:
         
         return stacking_clf
     
-    # ========================================================================
     # 4. PER-SUBJECT CALIBRATION
-    # ========================================================================
     
     def train_per_subject_models(self, df, feature_cols):
         """Train personalized models for each subject"""
@@ -325,9 +317,7 @@ class FatigueClassifier:
         
         return None
     
-    # ========================================================================
     # 5. VISUALIZATION METHODS
-    # ========================================================================
     
     def plot_confusion_matrices(self):
         """Plot confusion matrices for all methods"""
@@ -482,9 +472,7 @@ class FatigueClassifier:
         for idx, row in importance_df.head(10).iterrows():
             print(f"  {row['feature']:40s} {row['rf_importance']:.6f}")
     
-    # ========================================================================
     # MAIN PIPELINE
-    # ========================================================================
     
     def run_advanced_analysis(self):
         """Run complete advanced analysis pipeline"""
@@ -553,9 +541,7 @@ class FatigueClassifier:
         
         print(f"\n{'='*70}\n")
         
-        # ====================================================================
         # BASELINE: Standard SVM (for comparison)
-        # ====================================================================
         print(f"\n{'='*70}")
         print("BASELINE MODEL (Standard SVM)")
         print(f"{'='*70}\n")
@@ -576,9 +562,7 @@ class FatigueClassifier:
         self.y_pred_dict['Baseline SVM'] = y_pred_baseline
         self.y_pred_proba_dict['Baseline SVM'] = y_pred_proba_baseline
         
-        # ====================================================================
-        # METHOD 1: Feature Engineering (Interactions)
-        # ====================================================================
+        # METHOD 1: Feature Engineering
         print(f"\n{'='*70}")
         print("METHOD 1: FEATURE ENGINEERING (INTERACTIONS)")
         print(f"{'='*70}")
@@ -607,9 +591,7 @@ class FatigueClassifier:
         self.y_pred_dict['SVM + Interactions'] = y_pred_eng
         self.y_pred_proba_dict['SVM + Interactions'] = y_pred_proba_eng
         
-        # ====================================================================
         # METHOD 2: PCA Dimensionality Reduction
-        # ====================================================================
         print(f"\n{'='*70}")
         print("METHOD 2: PCA DIMENSIONALITY REDUCTION")
         print(f"{'='*70}")
@@ -636,9 +618,7 @@ class FatigueClassifier:
         self.y_pred_dict['SVM + PCA'] = y_pred_pca
         self.y_pred_proba_dict['SVM + PCA'] = y_pred_proba_pca
         
-        # ====================================================================
         # METHOD 3: Voting Ensemble
-        # ====================================================================
         print(f"\n{'='*70}")
         print("METHOD 3: VOTING ENSEMBLE")
         print(f"{'='*70}")
@@ -660,9 +640,7 @@ class FatigueClassifier:
         self.y_pred_dict['Voting Ensemble'] = y_pred_voting
         self.y_pred_proba_dict['Voting Ensemble'] = y_pred_proba_voting
         
-        # ====================================================================
         # METHOD 4: Stacking Ensemble
-        # ====================================================================
         print(f"\n{'='*70}")
         print("METHOD 4: STACKING ENSEMBLE")
         print(f"{'='*70}")
@@ -684,18 +662,14 @@ class FatigueClassifier:
         self.y_pred_dict['Stacking Ensemble'] = y_pred_stacking
         self.y_pred_proba_dict['Stacking Ensemble'] = y_pred_proba_stacking
         
-        # ====================================================================
         # METHOD 5: Per-Subject Models
-        # ====================================================================
         print(f"\n{'='*70}")
         print("METHOD 5: PER-SUBJECT PERSONALIZED MODELS")
         print(f"{'='*70}")
         
         subject_results = self.train_per_subject_models(df, feature_cols)
         
-        # ====================================================================
         # GENERATE VISUALIZATIONS
-        # ====================================================================
         print(f"\n{'='*70}")
         print("GENERATING VISUALIZATIONS")
         print(f"{'='*70}")
@@ -704,9 +678,7 @@ class FatigueClassifier:
         self.plot_roc_curves()
         self.plot_feature_importance(X_train_scaled, y_train, feature_cols)
         
-        # ====================================================================
         # FINAL SUMMARY
-        # ====================================================================
         self.print_final_summary()
         self.plot_improvement_comparison()
     
@@ -823,5 +795,5 @@ if __name__ == "__main__":
     # Run complete advanced analysis
     advanced_clf.run_advanced_analysis()
     
-    print("\n✓ Advanced ML analysis complete!")
-    print(f"✓ Check {OUTPUT_DIR}/ for results")
+    print("\n Advanced ML analysis complete!")
+    print(f" Check {OUTPUT_DIR}/ for results")
